@@ -8,9 +8,7 @@ import UserRouter from "./routes/user.route.js"
 import Auth from "./auth/auth.js"
 import session from "express-session"
 import Payment from "./routes/payment.route.js"
-import crypto from "crypto"
-import nodemailer from "nodemailer"
-import sendgridTransport from "nodemailer-sendgrid-transport"
+import AccomodationRoute from "./routes/accomodation.route.js"
 
 
 //http://localhost:5173/
@@ -56,6 +54,7 @@ app.use("/api/reviews",ReviewRoute)
 app.use("/api/users",UserRouter)
 app.use("/api/auth",Auth)
 app.use("/api/payment",Payment)
+app.use("/api/accomodation",AccomodationRoute)
 
 app.get("/hello",(req,res)=>{
     res.send("life is good")
