@@ -9,17 +9,24 @@ import Auth from "./auth/auth.js"
 import session from "express-session"
 import Payment from "./routes/payment.route.js"
 import AccomodationRoute from "./routes/accomodation.route.js"
+import MongoStore from "connect-mongo";
 
 
 //http://localhost:5173/
 const app = express()
 dotenv.config()
 
+const mongoStore = MongoStore.create({
+    mongoUrl: process.env.MONGO,
+    ttl: 60 * 60 * 24, // session TTL (optional)
+  });
+
 app.use(
     session({
-      secret: "any string",
-      resave: false,
-      saveUninitialized: true,
+        secret: "myappsecret",
+        resave: false,
+        saveUninitialized: false,
+        store: mongoStore,
     })
    );
 //    app.use((req, res, next) => {
