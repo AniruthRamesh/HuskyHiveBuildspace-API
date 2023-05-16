@@ -37,7 +37,7 @@ export const login = async (req,res)=>{
         const {password,...info} = user._doc
         req.session.currentUser = info
 
-        console.log(info)
+        console.log(req.session.currentUser)
         res.json(info)
     } catch(err){
         res.status(500).send("Something went wrong")
