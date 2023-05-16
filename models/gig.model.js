@@ -6,27 +6,27 @@ const GigSchema = new Schema(
   
     projectCardImg: {
       type: String,
-      required: true,
+      required: false,
     },
     pp: {
       type: String,
-      required: true,
+      required: false,
     },
     cat: {
       type: String,
-      required: true,
+      required: false,
     },
     userName: {
       type: String,
-      required: true,
+      required: false,
     },
     title: {
       type: String,
-      required: true,
+      required: false,
     },
     desc: {
       type: String,
-      required: true,
+      required: false,
     },
     totalStars: {
       type: Number,
@@ -34,15 +34,15 @@ const GigSchema = new Schema(
     },
     cardDesc: {
         type: String,
-        required: true,
+        required: false,
       },
     cardTitle: {
       type: String,
-      required: true,
+      required: false,
     },
     price: {
       type: Number,
-      required: true,
+      required: false,
     },
     images: {
       type: String,
@@ -50,7 +50,7 @@ const GigSchema = new Schema(
     },
     deliveryTime: {
       type: Number,
-      required: true,
+      required: false,
     },
     revisionNumber: {
       type: Number,
