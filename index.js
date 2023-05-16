@@ -66,7 +66,7 @@ app.get("/",(req,res)=>{
 
 
 
-app.listen(4000,()=>{
+app.listen(process.env.PORT||4000,()=>{
     mongoConnection()
     console.log("MongoDB connected")
     console.log("Backend is running")
